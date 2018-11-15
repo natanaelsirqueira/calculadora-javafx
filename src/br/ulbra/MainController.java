@@ -1,5 +1,6 @@
 package br.ulbra;
 
+import br.ulbra.operation.Operator;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,7 +22,7 @@ public class MainController implements Initializable {
     @FXML
     private Button bt9;
     @FXML
-    private Button btPercent;
+    private Button btClear;
     @FXML
     private Button bt4;
     @FXML
@@ -75,15 +76,34 @@ public class MainController implements Initializable {
 
         operationButtons.forEach(bt -> bt.setOnAction(e -> {
             operation = bt.getText();
+            
             updateDisplay();
         }));
         
         btEquals.setOnAction(e -> {
-            Double n1 = Double.parseDouble(factor1);
-            Double n2 = Double.parseDouble(factor2);
-            
-            // TODO finish
+            if (!factor2.equals("")) {
+                Double x1 = Double.parseDouble(factor1);
+                Double x2 = Double.parseDouble(factor2);
+
+                Operator op = Operator.fromString(operation);
+
+                factor1 = calculate(op, x1, x2);
+                factor2 = "";
+
+                txDisplay.setText(factor1);
+            }
         });
+        
+        btClear.setOnAction(e -> {
+            factor1 = "";
+            operation = "";
+            factor2 = "";
+            updateDisplay();
+        });
+    }
+    
+    private String calculate(Operator op, Double x1, Double x2) {
+        return String.valueOf(op.apply(x1, x2));
     }
 
     private void updateDisplay() {

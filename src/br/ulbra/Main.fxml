@@ -27,7 +27,7 @@
             <Button fx:id="bt7" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" text="7" />
             <Button fx:id="bt8" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" text="8" GridPane.columnIndex="1" />
             <Button fx:id="bt9" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" text="9" GridPane.columnIndex="2" />
-            <Button fx:id="btPercent" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" text="\%" GridPane.columnIndex="3" />
+            <Button fx:id="btClear" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" text="C" GridPane.columnIndex="3" />
             <Button fx:id="bt4" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" text="4" GridPane.rowIndex="1" />
             <Button fx:id="bt5" layoutX="10.0" layoutY="43.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Button fx:id="bt6" layoutX="42.0" layoutY="43.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
